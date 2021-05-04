@@ -7,7 +7,7 @@ import {markdownify} from '../utils';
 export default class Page extends React.Component {
     render() {
         return (
-            <Layout {...this.props}>
+            <Layout {...this.props}>aaa
             <article className="page py-5 py-sm-6">
             	<div className="container container--medium">
             		<header className="page__header">
