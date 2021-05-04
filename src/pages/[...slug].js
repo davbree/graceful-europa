@@ -6,6 +6,8 @@ import { withRemoteDataUpdates } from 'sourcebit-target-next/with-remote-data-up
 import pageLayouts from '../layouts';
 
 
+
+
 class Page extends React.Component {
     render() {
         // every page can have different layout, pick the layout based
