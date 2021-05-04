@@ -6,34 +6,7 @@ import '../sass/main.scss';
 //dd
 function MyApp({ Component, pageProps }) {
 
-    useEffect(() => {
-        if (window.onNextjsAppDidMount) {
-            window.onNextjsAppDidMount();
-        }
 
-        if (window.onNextjsRouteChangeComplete) {
-            window.onNextjsRouteChangeComplete();
-        }
-
-        const handleRouteChangeStart = () => {
-            if (window.onNextjsRouteChangeStart) {
-                window.onNextjsRouteChangeStart();
-            }
-        }
-
-        const handleRouteChangeComplete = () => {
-            if (window.onNextjsRouteChangeComplete) {
-                window.onNextjsRouteChangeComplete();
-            }
-        }
-
-        Router.events.on('routeChangeStart', handleRouteChangeStart);
-        Router.events.on('routeChangeComplete', handleRouteChangeComplete);
-        return () => {
-            Router.events.off('routeChangeStart', handleRouteChangeStart);
-            Router.events.off('routeChangeComplete', handleRouteChangeComplete);
-        };
-    }, []);
 
     return <Component {...pageProps} />;
 }
